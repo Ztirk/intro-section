@@ -27,13 +27,6 @@ function Nav() {
         setTogglebar(!togglebar)
     }
 
-    // React.useEffect(() => {
-    //     window.addEventListener('load', handleBar)
-    //     window.addEventListener('resize', handleBar)
-    // }, [])
-
-    
-
   return (
     <>
         <div className='container fs gray'>
