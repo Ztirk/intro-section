@@ -1,0 +1,327 @@
+.container {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    margin: 20px 30px;
+    align-items: center;
+    gap: 30px;
+}
+
+.fade {
+    display: none
+}
+
+.logo {
+    margin-right: 50px;
+    transform: translateY(3px);
+}
+
+ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+.fold-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+}
+
+.nav > ul {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    justify-content: start;
+    list-style-type: none;
+    column-gap: 30px;
+    
+}
+
+.nav ul li div:hover {
+    color: hsl(0, 0%, 8%);
+    cursor: pointer;
+}
+
+.left.dropdown {
+    transform: translate(-70px, 20px);
+
+}
+
+.dropdown {
+    display: grid;
+    gap: 20px;
+    list-style: none;
+    position: absolute;
+    background-color: white;
+    padding: 30px 20px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px gray;
+    opacity: 0%;
+    transition: opacity 1s ease;
+    transform: translateY(20px);
+}
+
+.dropdown.dropdowned {
+    opacity: 100%;
+
+}
+
+.menu:hover {
+    color:hsl(0, 0%, 8%);
+    cursor: pointer;
+}
+
+.icon-container {
+    display: grid;
+    grid-template-columns:  auto 1fr;
+    gap: 15px
+}
+
+.icon {
+   height: 16px;
+   width: 16px;
+}
+
+.arrow-down {
+    transform: rotate(0deg);
+    transition: transform 1s ease;
+}
+
+.arrow-up.arrow-down {
+    transform: rotate(180deg);
+    
+}
+
+.login ul {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: end;
+    align-items: center;
+    list-style: none ;
+    gap: 30px;
+}
+
+.login ul li:hover {
+    color: hsl(0, 0%, 8%);
+    cursor: pointer;
+}
+
+.login ul .register:hover {
+    color: hsl(0, 0%, 8%);
+    border: 1px hsl(0, 0%, 8%) solid;
+    cursor: pointer;
+}
+
+.register {
+    border: 1px hsl(0, 0%, 41%) solid;
+    padding: 10px 20px;
+    border-radius: 15px;
+}
+
+.toggle-bar {
+    color: hsl(0, 0%, 8%);
+    display: none;
+}
+
+.toggle-bar:hover {
+    cursor: pointer;
+    color: hsl(0, 0%, 41%)
+}
+
+
+
+
+/* RESPONSIVE -------------------------------------------------------------------------------------------------*/
+
+@media (max-width: 992px) {
+    .container {
+        display: grid;
+        grid-template-columns: auto auto;
+        margin: 20px 30px;
+        align-items: center;
+        gap: 30px;
+    }
+    
+    .logo {
+        padding: 5px 0px;
+        margin-right: 0;
+        transform: translateY(3px);
+    }
+
+    .fade {
+        display: flex;
+        visibility: hidden;
+        background-color:hsl(0, 0%, 8%);
+        transition: opacity 1s ease, visibility;
+        opacity: 0%;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+    }
+
+    .fade.faded {
+        visibility: visible;
+        opacity: 50%;
+    }
+
+    .fold-container {
+        display: block;
+        grid-template-columns: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 0%;
+        background-color: white;
+        z-index: 1;
+        justify-content: center;
+        align-items: start;
+        gap: 0px;
+        transition: width 1s ease;
+        overflow: hidden;
+    }
+
+    .fold-container.fold-containered {
+        width: 70%;
+    }
+
+    .nav {
+        margin-top: 50px;
+        margin-left: 30px;
+        margin-bottom: 40px;
+        display: flex;
+        justify-content: start;
+        
+    }
+
+
+    .login {
+        display: grid;
+        justify-content: center;
+        text-align: center;
+        
+    }
+    
+    .nav > ul {
+        display: grid;
+        grid-template-columns: none;
+        justify-content: none;
+        list-style-type: none;
+        column-gap: 0px;
+        gap: 20px;
+        
+    }
+
+    
+    .nav ul li div:hover {
+        color: hsl(0, 0%, 8%);
+        cursor: pointer;
+    }
+    
+    .left.dropdown {
+        transform: translate(0px, 0px);
+    
+    }
+    
+    .dropdown {
+        display: none;
+        overflow: hidden;
+        gap: 0px;
+        list-style: none;
+        position: relative;
+        background-color: none;
+        padding: 0px 0px;
+        border-radius: 0px;
+        box-shadow: 0px 0px 0px gray;
+        height: 0%;
+        transition: height 1s ease;
+        transform: translateY(0px);
+        margin-left: 30px;
+    }
+    
+    .dropdown.dropdowned {
+        display: grid;
+        height: 100%;
+    
+    }
+
+    .padbot {
+        padding-bottom: 20px
+    }
+
+    .menu, .icon {
+        padding-top: 20px;
+    }
+    
+    .menu:hover {
+        color:hsl(0, 0%, 8%);
+        cursor: pointer;
+    }
+    
+    .icon-container {
+        display: grid;
+        grid-template-columns:  auto 1fr;
+        gap: 15px
+    }
+    
+    .icon {
+       height: 16px;
+       width: 16px;
+    }
+    
+    .arrow-down {
+        transform: rotate(0deg);
+        transition: transform 1s ease;
+    }
+    
+    .arrow-up.arrow-down {
+        transform: rotate(180deg);
+        
+    }
+    
+    .login ul {
+        display: grid;
+        grid-template-columns: none;
+        justify-content: none;
+        align-items: none;
+        list-style: none ;
+        gap: 20px;
+        
+    }
+    
+    .login ul li:hover {
+        color: hsl(0, 0%, 8%);
+        cursor: pointer;
+    }
+    
+    .login ul .register:hover {
+        color: hsl(0, 0%, 8%);
+        border: 1px hsl(0, 0%, 8%) solid;
+        cursor: pointer;
+    }
+    
+    .register {
+        border: 1px hsl(0, 0%, 41%) solid;
+        padding: 10px 50px;
+        border-radius: 15px;
+    }
+    
+    .toggle-bar {
+        color: hsl(0, 0%, 8%);
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        margin: 0;
+    }
+    
+    .toggle-bar.xmark {
+        z-index: 10;
+        position: fixed;
+        right: 50px;
+    }
+    
+    .toggle-bar:hover {
+        cursor: pointer;
+        color: hsl(0, 0%, 41%)
+    }
+}

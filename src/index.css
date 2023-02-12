@@ -1,0 +1,32 @@
+html {
+  font-family: Epilogue, sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: hsl(0, 0%, 98%);
+}
+
+.fs {
+  font-size: 18px;
+}
+
+.bold {
+  font-weight: 500;
+}
+
+.bolder {
+  font-weight: 700;
+}
+
+.white {
+  color: hsl(0, 0%, 98%);
+}
+
+.gray {
+  color: hsl(0, 0%, 41%);
+}
+
+.black {
+  color: hsl(0, 0%, 8%)
+}
